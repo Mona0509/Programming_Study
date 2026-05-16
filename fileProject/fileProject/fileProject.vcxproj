@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{dcbcd4d4-85d0-4c77-a8e7-bb796fa66c2a}</ProjectGuid>
-    <RootNamespace>Kadai4</RootNamespace>
+    <ProjectGuid>{61e1d591-7e57-47d0-90b1-3ec2bfb00fbf}</ProjectGuid>
+    <RootNamespace>fileProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,11 +123,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="disp.cpp" />
-    <ClCompile Include="Kadai_4.cpp" />
+    <ClCompile Include="fileProject.cpp" />
+    <ClCompile Include="File\FileA.cpp" />
+    <ClCompile Include="File\FileB.cpp" />
+    <ClCompile Include="File\FileC.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="disp.h" />
+    <ClInclude Include="File\FileA.h" />
+    <ClInclude Include="File\FileB.h" />
+    <ClInclude Include="File\FileC.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

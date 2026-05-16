@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c9a5dc9c-7fa8-496e-bb10-7ee77acf00be}</ProjectGuid>
-    <RootNamespace>Kadai2</RootNamespace>
+    <ProjectGuid>{5796d193-3e1c-40b2-b9ae-cc2cdee3e2a5}</ProjectGuid>
+    <RootNamespace>ArrayProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,7 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Kadai_2.cpp" />
+    <ClCompile Include="ArrayProject.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
