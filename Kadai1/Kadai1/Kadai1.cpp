@@ -2,19 +2,40 @@
 //
 
 #include <iostream>
+#include <stdio.h>
+// name,hp,attack,defenseの要素を持つプログラム(構造体)を作成
+struct StatusProgram {
+	char name;
+	int hp;
+	int attack;
+	int defense;
+};
+
+int OpenStatus(StatusProgram status);
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	// 2体分のステータスデータを作成
+	// ステータスデータを初期化、保持する
+	StatusProgram player_status{
+		'P',100,50,30
+	};
+	OpenStatus(player_status);
+	StatusProgram enemy_status{
+		'E',100,50,30
+	};
+	OpenStatus( enemy_status);
+	return 0;
 }
 
-// プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
-// プログラムのデバッグ: F5 または [デバッグ] > [デバッグの開始] メニュー
-
-// 作業を開始するためのヒント: 
-//    1. ソリューション エクスプローラー ウィンドウを使用してファイルを追加/管理します 
-//   2. チーム エクスプローラー ウィンドウを使用してソース管理に接続します
-//   3. 出力ウィンドウを使用して、ビルド出力とその他のメッセージを表示します
-//   4. エラー一覧ウィンドウを使用してエラーを表示します
-//   5. [プロジェクト] > [新しい項目の追加] と移動して新しいコード ファイルを作成するか、[プロジェクト] > [既存の項目の追加] と移動して既存のコード ファイルをプロジェクトに追加します
-//   6. 後ほどこのプロジェクトを再び開く場合、[ファイル] > [開く] > [プロジェクト] と移動して .sln ファイルを選択します
+// int型引数で関数を作成
+int OpenStatus(StatusProgram status) {	// 構造体を受け取り関数で表示する
+	// キャラクター情報を見やすく表示
+	printf("・%c の キャラクターステータス\n", status.name);
+	printf("名前   :%c\n", status.name);
+	printf("HP     :%d\n", status.hp);
+	printf("攻撃力 :%d\n", status.attack);
+	printf("防御力 :%d\n", status.defense);
+	printf("\n");
+	return 0;
+}
