@@ -123,7 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CheckClass.cpp" />
     <ClCompile Include="Kadai2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CheckClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
