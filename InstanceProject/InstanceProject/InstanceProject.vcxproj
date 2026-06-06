@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b9e226b6-1bc6-4ade-ab19-8672ecb5c8e7}</ProjectGuid>
-    <RootNamespace>OverloadProject</RootNamespace>
+    <ProjectGuid>{f449aee5-834d-4fb8-8a5b-afc8451a0a9d}</ProjectGuid>
+    <RootNamespace>InstanceProject</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,13 +123,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Animal.cpp" />
-    <ClCompile Include="function.cpp" />
-    <ClCompile Include="OverloadProject.cpp" />
+    <ClCompile Include="InstanceProject.cpp" />
+    <ClCompile Include="Project.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Animal.h" />
-    <ClInclude Include="function.h" />
+    <ClInclude Include="Project.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
