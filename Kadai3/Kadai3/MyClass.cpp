@@ -6,4 +6,3 @@ MyClass::MyClass() {
 MyClass::~MyClass() {
 	std::cout << "”jŠü" << std::endl;
 };
-

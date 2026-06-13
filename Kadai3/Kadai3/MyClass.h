@@ -7,6 +7,6 @@ public:
 	MyClass();
 	~MyClass();
 public:
-	std::shared_ptr<MyClass> myClass_ = {};
+	std::weak_ptr<MyClass> myClass_ = {};
 };
 
