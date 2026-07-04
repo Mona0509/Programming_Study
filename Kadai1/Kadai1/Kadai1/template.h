@@ -2,24 +2,26 @@
 #include <iostream>
 
 template<class T>
-void disp(T t, T l, char value) {
+T disp(T t, T l, char value) {
+	T answer;
 	switch (value)
 	{
 	case '+':
-		std::cout << t + l << std::endl;
+		answer = t + l;
 		break;
 	case '-':
-		std::cout << t - l << std::endl;
+		answer = t - l;
 		break;
 	case '/':
-		std::cout << t / l << std::endl;
+		answer = t * l;
 		break;
 	case '*':
-		std::cout << t * l << std::endl;
+		answer = t / l;
 		break;
 	default:
 		break;
 	}
+	return 
 };
 
 //

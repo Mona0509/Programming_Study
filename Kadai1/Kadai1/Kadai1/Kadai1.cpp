@@ -6,10 +6,10 @@
 
 int main()
 {
-    disp<int>(3,5,'+');
-    disp<int>(3,5,'-');
-    disp<int>(3,5,'/');
-    disp<int>(3,5,'*');
+    int answer1 = disp<int>(3,5,'+');
+    int answer2 = disp<int>(3,5,'-');
+    int answer3 = disp<int>(3,5,'/');
+    int answer4 = disp<int>(3,5,'*');
 }
 
 
