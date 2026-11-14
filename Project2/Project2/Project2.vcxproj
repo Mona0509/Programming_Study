@@ -125,11 +125,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommandAlloSystem.cpp" />
+    <ClCompile Include="CommandListSystem.cpp" />
+    <ClCompile Include="DescHeapSystem.cpp" />
     <ClCompile Include="FactoryObject.cpp" />
+    <ClCompile Include="FenceSystem.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RenderTgtSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandAlloSystem.h" />
+    <ClInclude Include="CommandListSystem.h" />
+    <ClInclude Include="DescHeapSystem.h" />
     <ClInclude Include="FactoryObject.h" />
+    <ClInclude Include="FenceSystem.h" />
+    <ClInclude Include="RenderTgtSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
