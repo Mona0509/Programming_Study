@@ -7,7 +7,7 @@ void RenderTgtSystem::CreateRenderTarget(
 	ComPtr<ID3D12Device> _device)
 {
 	// レンダーターゲット作成
-	ID3D12Resource* renderTargets[2];
+	ComPtr<ID3D12Resource> renderTargets[2];
 
 	for (int i = 0; i < 2; i++) {
 		// スワップチェンからバッファを取得
@@ -18,6 +18,6 @@ void RenderTgtSystem::CreateRenderTarget(
 		rtvHandle.ptr += i * _rtvDescriptorSize;
 
 		// RTVの作成
-		_device->CreateRenderTargetView(renderTargets[i], nullptr, rtvHandle);
+		_device->CreateRenderTargetView(renderTargets[i].Get(), nullptr, rtvHandle);
 	}
 }

@@ -8,7 +8,7 @@ class DescHeapSystem
 {
 public:
 	// ディスクリプタヒープの作成
-	ComPtr<ID3D12DescriptorHeap> CreateDescriptorHeap(ComPtr<ID3D12Device> _device);
+	ComPtr<ID3D12DescriptorHeap> CreateDescriptorHeaps(ComPtr<ID3D12Device> _device);
 	UINT DescriptHandle(ComPtr<ID3D12DescriptorHeap> _rtvHeap, ComPtr<ID3D12Device> _device);
 };
 

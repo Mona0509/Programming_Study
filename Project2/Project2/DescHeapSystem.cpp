@@ -1,7 +1,7 @@
 #include "DescHeapSystem.h"
 
 // ディスクリプタヒープの作成
-ComPtr<ID3D12DescriptorHeap> DescHeapSystem::CreateDescriptorHeap(ComPtr<ID3D12Device> _device) {
+ComPtr<ID3D12DescriptorHeap> DescHeapSystem::CreateDescriptorHeaps(ComPtr<ID3D12Device> _device) {
 	D3D12_DESCRIPTOR_HEAP_DESC rtvHeapDesc = {};
 	rtvHeapDesc.NumDescriptors = 2;
 	rtvHeapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
