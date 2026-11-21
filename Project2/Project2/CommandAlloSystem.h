@@ -7,6 +7,8 @@ using Microsoft::WRL::ComPtr;
 class CommandAlloSystem
 {
 public:
-	ComPtr<ID3D12CommandAllocator> CreateCommandAllo(ComPtr<ID3D12Device> _device);
+	void CreateCommandAllo(ComPtr<ID3D12Device> _device);
+
+	ComPtr<ID3D12CommandAllocator> commandAllocators = {};
 };
 

@@ -132,6 +132,7 @@
     <ClCompile Include="FenceSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RenderTgtSystem.cpp" />
+    <ClCompile Include="TrianlePolygon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandAlloSystem.h" />
@@ -140,6 +141,7 @@
     <ClInclude Include="FactoryObject.h" />
     <ClInclude Include="FenceSystem.h" />
     <ClInclude Include="RenderTgtSystem.h" />
+    <ClInclude Include="TrianlePolygon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

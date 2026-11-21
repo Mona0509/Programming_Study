@@ -1,6 +1,6 @@
 #include "RenderTgtSystem.h"
 
-void RenderTgtSystem::CreateRenderTarget(
+ComPtr<ID3D12Resource> RenderTgtSystem::CreateRenderTarget(
 	ComPtr<IDXGISwapChain3> _swapChain,
 	ComPtr<ID3D12DescriptorHeap> _rtvHeap,
 	UINT _rtvDescriptorSize,
@@ -20,4 +20,5 @@ void RenderTgtSystem::CreateRenderTarget(
 		// RTV�̍쐬
 		_device->CreateRenderTargetView(renderTargets[i].Get(), nullptr, rtvHandle);
 	}
+	return renderTargets;
 }

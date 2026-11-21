@@ -9,7 +9,7 @@ using Microsoft::WRL::ComPtr;
 class RenderTgtSystem
 {
 public:
-	void CreateRenderTarget(
+	ComPtr<ID3D12Resource> CreateRenderTarget(
 		ComPtr<IDXGISwapChain3> _swapChain,
 		ComPtr<ID3D12DescriptorHeap> _rtvHeap,
 		UINT _rtvDescriptorSize,

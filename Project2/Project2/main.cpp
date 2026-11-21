@@ -10,6 +10,11 @@ using Microsoft::WRL::ComPtr;
 
 #include <Windows.h>
 #include "FactoryObject.h"
+#include "CommandAlloSystem.h"
+#include "CommandListSystem.h"
+#include "DescHeapSystem.h"
+#include "FenceSystem.h"
+#include "RenderTgtSystem.h"
 
 LRESULT CALLBACK WindowProc(
 	HWND hwnd,
@@ -111,6 +116,18 @@ int WINAPI WinMain(
 	ComPtr<ID3D12Device> device = factoryObj.CreateD3D12Dveice(factory, adapter);
 	ComPtr<ID3D12CommandQueue> commandQueue = factoryObj.CreateCommandQueue(device);
 	ComPtr<IDXGISwapChain3> swapChain = factoryObj.CreateSwapChain(factory, commandQueue, hwnd);
+
+	DescHeapSystem descHeapSystem;
+	RenderTgtSystem renderTgtSystem;
+	CommandAlloSystem commandAlloSystem;
+	CommandListSystem commandListSystem;
+	FenceSystem fenceSystem;
+
+	ComPtr<ID3D12DescriptorHeap> descriHeap = descHeapSystem.CreateDescriptorHeaps(device);
+	renderTgtSystem.CreateRenderTarget(swapChain, descriHeap,2,device);
+	commandAlloSystem.CreateCommandAllo(device);
+	commandListSystem.CreateCommandLists(device, commandAlloSystem.commandAllocators);
+	ComPtr<ID3D12Fence> fence = fenceSystem.CreatesFence(device);
 
 	ShowWindow(hwnd, nCmdShow);
 
